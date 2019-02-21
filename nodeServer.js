@@ -2,12 +2,18 @@
 // http module core
 const http = require('http');
 
+//fs = file system module it is a core module node
+//fs gives node to this computer's file system.
+const fs = require('fs');
+
 
 //the http module has a createServer method
 // takes 1 argrument which is a function
 // which is a callback that has 2 arguments: req,res
 
 const server=http.createServer((req,res)=>{
+
+    console.log(req.url)
 
    if(req.url === '/') {
        //the user wants the homepage,because the req object / in the url route
@@ -22,18 +28,25 @@ const server=http.createServer((req,res)=>{
 
     res.writeHead(200,{'Content-Type':'text/html'});
     // res.write(');
-    res.write('<h1> This is the homepage </h1>')
+     const homePageHTML = fs.readFileSync('node.html');
     // lets you the listening for the request
-    res.end()
+    res.write(homePageHTML);
+    res.end();
+   }
+   else if(req.url === "/node.png"){
+
+    console.log('is it working');
+    res.writeHead(200,{'content-type':'image/png'});
+    const image = fs.readFileSync('node.png')
+    res.write(image)
+    res.end();
    }
    else{
        res.writeHead(404,{'Content-Type':'text/html'});
        res.write(`<h4>Sorry this isn't the page you looking for</h4> `)
        res.end();
    }
-  
 
-   
 
 });
 
