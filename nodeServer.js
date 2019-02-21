@@ -26,6 +26,12 @@ const server=http.createServer((req,res)=>{
     // lets you the listening for the request
     res.end()
    }
+   else{
+       res.writeHead(404,{'Content-Type':'text/html'});
+       res.write(`<h4>Sorry this isn't the page you looking for</h4> `)
+       res.end();
+   }
+  
 
    
 
