@@ -22,14 +22,20 @@ const app = express();
 // app.delete();
 // app.put ();
 
+/// looking for any http method 
+/*app.all('/',(req,res) =>{
+    res.send('<h1> Welcome to the home </h1>');
+})
+*/
 
 
 app.get('/',(req,res) =>{
-
+    console.log(req);
+   res.send('<h1> Welcome to the home GET page')
 });
 
 app.post('/',(req,res) => {
-
+  res.send('<h1> Welcome to the home POST  page </h1>')
 });
 
 
@@ -39,7 +45,7 @@ app.delete('/',(req,res) =>{
 
 
 app.put('/',(req,res) =>{
-    
+
 })
 
 
