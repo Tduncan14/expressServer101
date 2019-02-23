@@ -41,6 +41,13 @@ const server=http.createServer((req,res)=>{
     res.write(image)
     res.end();
    }
+   else if(req.url === "/style.css"){
+     res.writeHead(200,{'content-type':'text/css'});
+     const css = fs.readFileSync('style.css');
+     res.write(css)
+     res.end();
+
+   }
    else{
        res.writeHead(404,{'Content-Type':'text/html'});
        res.write(`<h4>Sorry this isn't the page you looking for</h4> `)

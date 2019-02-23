@@ -1,0 +1,25 @@
+{
+  "name": "expressserver101",
+  "version": "1.0.0",
+  "description": "More Express practice.",
+  "main": "expressServer.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "save": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tduncan14/expressServer101.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tduncan14/expressServer101/issues"
+  },
+  "homepage": "https://github.com/Tduncan14/expressServer101#readme"
+}
