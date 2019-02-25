@@ -1,11 +1,12 @@
 {
-  "name": "express201",
+  "name": "express301",
   "version": "1.0.0",
   "description": "",
-  "main": "appUse.js",
+  "main": "loginSite.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " nodemon loginSite.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

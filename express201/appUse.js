@@ -47,6 +47,6 @@ app.get('/admin',(req,res) =>{
     console.log(res.locals.validated);
 })
 
-app.listen(3000);
+//app.listen(3000);
 
-console.log('Keep moving forward Treek and listening on port 3000')
+//console.log('Keep moving forward Treek and listening on port 3000')
